@@ -40,6 +40,10 @@
                         @can('manage_permission')
                         <a href="{{url('permission')}}" class="menu-item {{ ($segment1 == 'permission') ? 'active' : '' }}">{{ __('Permission')}}</a>
                         @endcan
+                        {{-- Priya --}}
+                        @can('manage_permission')
+                        <a href="{{url('fileupload')}}" class="menu-item {{ ($segment1 == 'permission') ? 'active' : '' }}">{{ __('Upload File')}}</a>
+                        @endcan
                     </div>
                 </div>
                 <div class="nav-lavel">{{ __('Documentation')}} </div>

@@ -15,6 +15,7 @@ use App\Http\Controllers\TaxDeclarationController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\UploadFileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,6 +85,10 @@ Route::group(['middleware' => 'auth'], function(){
 		Route::post('/role/update', [RolesController::class,'update']);
 		Route::get('/role/delete/{id}', [RolesController::class,'delete']);
 	});
+
+	// Priya
+	Route::get('/fileupload',[UploadFileController::class,'index']);
+	Route::post('/addfile', [UploadFileController::class,'upload'])->name('file-upload');
 
 
 	//only those have manage_permission permission will get access
